@@ -1,0 +1,15 @@
+
+test: test.o print1.o print2.o
+	gcc test.o print1.o print2.o -g -Wall -o test
+
+test.o:test.c
+	gcc test.c -c -g -Wall -o test.o
+
+print1.o:print1.c
+	gcc print1.c -c -g -Wall -o print1.o
+
+print2.o:print2.c
+	gcc print2.c -c -g -Wall -o print2.o
+
+clean:
+	rm *.o test -rf
